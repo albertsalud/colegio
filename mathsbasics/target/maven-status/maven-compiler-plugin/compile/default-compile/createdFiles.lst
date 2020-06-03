@@ -1,0 +1,5 @@
+com\albertsalud\mathsbasics\controllers\SumController.class
+com\albertsalud\mathsbasics\controllers\BasicController.class
+com\albertsalud\mathsbasics\controllers\DivisionController.class
+com\albertsalud\mathsbasics\controllers\RemainderController.class
+com\albertsalud\mathsbasics\controllers\MultiplicationController.class

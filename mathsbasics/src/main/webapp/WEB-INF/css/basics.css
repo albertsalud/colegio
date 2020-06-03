@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	margin: 20px;
+}
+
+.correcto {
+	color: green;
+}
+
+.incorrecto {
+	color: red;
+}
+
+.lastLine td {
+	border-bottom: 1px solid black
+}
+
+.operationTable{
+	font-size: 2em;
+}
