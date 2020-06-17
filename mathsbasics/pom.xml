@@ -8,57 +8,12 @@
   <packaging>war</packaging>
  
   <name>A custom project</name>
-  <url>http://www.plancomunicacion.com</url>
   
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   
-  <!-- Repositorio donde descargarse dependencias -->
-  <repositories>
-  	<repository>
-        <id>com.plancomunicacion.maven</id>
-        <name>com.plancomunicacion.maven</name>
-        <url>http://192.168.100.23:8081/repository/com.plancomunicacion.maven/</url>
-      </repository>
-  </repositories>
-  
-  <!-- Reposotorio remoto donde deployar los proyectos -->
-  <distributionManagement>
-      <repository>
-        <id>com.plancomunicacion.maven</id>
-        <name>com.plancomunicacion.maven</name>
-        <url>http://192.168.100.23:8081/repository/com.plancomunicacion.maven/</url>
-      </repository>
-  </distributionManagement>
-  
-  <profiles>
-  	<profile>
-  		<id>local</id>
-  		<activation>
-            <activeByDefault>true</activeByDefault>
-        </activation>
-  		<properties>
-  			<plan.log.level>DEBUG</plan.log.level>
-  			<plan.log.server>${jboss.server.log.dir}</plan.log.server>
-  			<plan.db.user>TEST_U</plan.db.user>
-  			<plan.db.pass>TEST_P</plan.db.pass>
-  			<plan.db.host>jdbc:oracle:thin:@192.168.100.12:1521:orcl</plan.db.host>
-  		</properties>
-  	</profile>
-  	<profile>
-  		<id>produccion</id>
-  		<properties>
-  			<plan.log.level>WARN</plan.log.level>
-  			<plan.log.server>${jboss.server.log.dir}</plan.log.server>
-  			<plan.db.user>WPRENSA_U</plan.db.user>
-  			<plan.db.pass>WPRENSA_U</plan.db.pass>
-  			<plan.db.host>jdbc:oracle:thin:@nissan-scan.nissan.local:1521/NISSAN</plan.db.host>
-  		</properties>
-  	</profile>
-  </profiles>
- 
   <dependencies>
   	<!-- Spring -->
 	<dependency>
